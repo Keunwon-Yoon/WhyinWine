@@ -3,21 +3,82 @@
     <meta charset="utf-8">
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&family=Single+Day&display=swap" rel="stylesheet">
+
         <style>
             header {
-                width: 800px;
+                width: 900px;
                 height: 150px;
                 background-color: rgb(200, 90, 90);
+                margin: 5px;
+            }
+            nav {
+                width: 160px;
+                height: 500px;
+                background-color: rgb(225, 222, 222);
+            }
+            article {
+                flex-grow: 1;
+                width: 600px;
+                height: 500px;
+            }
+            aside {
+                width: 180px;
+                height: 400px;
+                background-color: rgb(245, 243, 243);
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap; /* flex를 묶어서 좁아지면 아래로 내림 */
+                justify-content: space-between; /* 컨텐츠 위치 설정 */
+                padding: 10px;
+            }
+            footer {
+                width: 900px;
+                height: 100px;
+                text-align: right;
             }
             .left {
                 float: left;
+            }
+            .container {
+                width: 565px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                position: relative;
+                /* padding: 10px; */
+            }
+            .item {
+                width: 150px;
+                height: 200px;
+                border: 1px solid rgb(195, 193, 193);
             }
         </style>
     </head>
     <body>
         <header>
-            <img src= 'https://img.freepik.com/premium-vector/wine-bottle-and-cup-kawaii-character_24911-48862.jpg' class= "left" height="150px">
-            <h1 class= "left" style="color: beige; padding-top: 20px; padding-left: 15px;">세희의 와인 와인</h1>
-            <h2 class= "left" style="padding-top: 30px; padding-left: 10px;">(Sarah's WhyIn Wine)</h2>
+            <img src= 'wine.PNG' class= "left" height="150px">
+            <h1 class= "left" style="color: beige; padding-top: 40px; padding-left: 15px; font-family: 'Single Day', cursive; font-size: 50px;">세희의 와인 와인</h1>
+            <h2 class= "left" style="padding-top: 60px; padding-left: 10px; font-family: 'Single Day', cursive;">(Sarah's WhyIn Wine)</h2>
         </header>
+        <nav class="left" style= "font-family: 'Single Day', cursive;">
+            <div style="font-size: larger; padding: 10px;">Home</div>
+            <div style="font-size: larger; padding: 10px;">Wine Review</div>
+            <div style="font-size: larger; padding: 10px; background-color: rgb(247, 248, 248);">Tasting Note</div>
+        </nav>
+        <article class="left container">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA3MTJfMTI4%2FMDAxNTk0NTE4MzQ5OTkz.yXv1-QO9Tmck-m5QvQtOxYkMwYH0VFzuNQ8WwfXswYMg.LRRwirCXVKYQsMKDLAdZHxZXj6j20cgw86e2Y6PsSb8g.PNG.xmen01%2FErrazuriz_Max_Reserva_Cabernet_Sauvignon.png" alt="no.1" title="제목" class= "rounded float-start item">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDhfMjc4%2FMDAxNjA0ODM0NzMyOTYz.PSFwr-0g305Vj3iJfXlrbHmP9PDdUQQBj5YVBC4ratMg.YHlJE1O2ubEDP8KIre9zSKo_jyyxdrs3SNm5Y7kU4Jcg.JPEG.xmen01%2F31.Brown_Brothers_18_Eighty_Nine_Cabernet_Sauvignon.jpg" class= "rounded float-start item">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MzBfMTQ1%2FMDAxNjIyMzUxMzk1MzEy.Y35bTiIKQgbjnboTYpSGxlw35LseglzN9DTIFTIPNL8g.h5khAE2_9_nSWz_lEm1kwBD3bYx2-aHBRH8y2QIHAuAg.PNG.xmen01%2F33.Ch%253Fteau_Poupille_Castillon_-_C%253Ftes_de_Bordeaux.png" class= "rounded float-start item">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjlfMTkz%2FMDAxNjIyMjc4OTQ4MjM0.FraY88wPI8aZkN093N4mi8Yd977AgooQP2FJd-PAZZkg.HwNXLFCvPNB6qw-Po5TbfPVpRz9Ref2uki5MOIvy6AAg.PNG.xmen01%2F21.Ch%253Fteau_de_Belcier_Castillon_-_C%253Ftes_de_Bordeaux.png" class= "rounded float-start item">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MzBfMTk5%2FMDAxNjIyMzcyODM3Nzkx.-EpQoGCOGi9dCEvsR_oMyl6Ox-EZqhlfRXV-vv3gXOcg.HXFn8FQjzvoIEa9mwSVAeobsPu7ZZlZ6BOQo__ZXveog.PNG.xmen01%2F22.Bouchard_P%253Fre__Fils_C%253Fte_de_Nuits-Villages.png" class= "rounded float-start item">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjlfMTY0%2FMDAxNjIyMjQ0MjkzNDQ0.7yy8SpW7xqQpPBcGQUYZw_P5ZkO8gJul_DrS_lkzvzsg.dAMumYJqX1Nf_DREXovDuj6lt0udySdCMo-8UzW8rrkg.PNG.xmen01%2F45.Les_Grandes_Serres_Les_Portes_du_Castelas_C%253Ftes_du_Rh%253Fne_Rouge.png" class= "rounded float-start item">
+        </article>
+        <aside class= "left">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA4MjVfMzgg%2FMDAxNjYxMzc2MjAwNjA5.OnToKFnvOxRVvPR5U7tQYSZBjP7yDc9y_UcyRJFRl14g.k-4OnrP9cQLug6X7Xhbh5inOvL2aHTYQKqDhkqo3QMgg.JPEG.jang2977%2F573f287a9a1661303468.jpg" width="160px">
+            <div>귀여운 도구리를 CU에서 만나보세요!</div>
+            <button style="background-color: greenyellow; border: 0px;">바로 가기</button>
+        </aside>
     </body>
